@@ -1,9 +1,7 @@
-## DNYToken
+# DNYToken
 Create Token using Openzeppelin & Truffle Framework
 
-
-
-# Requirements
+##### Requirements
 Nodejs.
 Truffle.
 Git.
