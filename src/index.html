@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DownyToken</title>
+    <link href="https://fonts.googleapis.com/css?family=Charm|Chonburi|Kanit|Sarabun|Bungee+Inline&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="http://brns.com/daow/css/reset.css" />
+    <link rel="stylesheet" href="http://brns.com/daow/css/screen.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://brns.com/daow/css/w3.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: linear-gradient(#1A76BE, cornflowerblue);
+        }
+
+        body {
+            
+            background: #111111;
+            /*
+            background: cornflowerblue;
+            */
+            background-image: url('https://www.picz.in.th/images/2018/08/28/fhNV3u.png'), url('https://www.picz.in.th/images/2018/08/28/fhNv4P.png'), url('https://www.picz.in.th/images/2018/08/28/fhNFmE.th.png');
+            animation: snow 60s linear infinite;
+            
+        }
+
+        @keyframes snow {
+            0% {
+                background-position: 0 0, 0 0, 0 0;
+            }
+
+            100% {
+                background-position: 500px 1000px, 400px 400px, 300px 300px;
+            }
+        }
+
+        .chonburi {
+            font-family: 'Chonburi', cursive;
+        }
+
+        .sarabun {
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        .kanit {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .charm {
+            font-family: 'Bungee Inline', cursive;
+        }
+
+        .shadow {
+            background: #000;
+            border-radius: 12px 12px 4px 4px;
+            box-shadow: 0 0 20px 10px #000;
+            height: 15px;
+            margin: 30px auto;
+            opacity: 0.15;
+            width: inherit;
+            max-width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container w3-container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-push-2">
+                <h1 style="color:white" class="w3-xxxlarge text-center charm">DNYToken</h1>
+                <br />
+                <br />
+                <br />
+            </div>
+            <p></p>
+
+            <div id="petsRow" class="w3-container row">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        $("#Next").click(function () {
+                            $(this).hide();
+                            $("#AddressField,#transferButton").show();
+                        });
+                    });
+                </script>
+                <div class="col-sm-6 col-sm-push-3 col-md-4 col-md-push-4 w3-padding">
+                    <div class="panel panel-default w3-card-4">
+                        <div class="panel-heading w3-blue">
+                            <div class="panel-title w3-row w3-xlarge">
+                                <div class="w3-col s8">
+                                    <i class="fas fa-wallet fa-lg"></i>
+                                </div>
+                                <div class="w3-col s4 w3-right-align">
+                                    <span id="TTBalance"></span> DNY
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>Address</label>
+                                <input class="w3-input w3-border w3-text-blue" type="text" id="TTTransferAddress" />
+                            </div>
+                            <button id="Next" class="btn btn-primary w3-right" type="button">Next</button>
+
+                            <div id="AddressField" class="from-group" style="display: none;">
+                                <label>Amount</label>
+                                <input class="w3-input w3-border w3-text-blue" type="text" id="TTTransferAmount" />
+                            </div>
+                            <br/>
+                            <button style="display:none" class="btn btn-primary w3-right" id="transferButton" type="button">Send</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/web3.min.js"></script>
+        <script src="js/truffle-contract.js"></script>
+        <script src="js/app.js"></script>
+</body>
+
+</html>
